@@ -9,16 +9,17 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <div>
-        <h3>{!!this.state.term ? this.state.term.toUpperCase() : "GANEY"}</h3><br /><br />
-        <input className='form-control' value={this.state.term} onChange={this.onInputChange.bind(this)} />
+      <div className="search-bar">
+        {/*  <h3>{!!this.state.term ? this.state.term.toUpperCase() : "GANEY"}</h3><br /><br />  */}
+        <input className='form-control' value={this.state.term} onChange={event => this.onInputChange(event.target.value)} />
       </div>
     )
   }
 
-  onInputChange(event) {
+  onInputChange(term) {
     // console.log(event.target.value);
-    this.setState({term: event.target.value})
+    this.setState({term});
+    this.props.onSearchTermChange(term)
   }
 
 
