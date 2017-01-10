@@ -9,9 +9,11 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <div className="search-bar">
-        {/*  <h3>{!!this.state.term ? this.state.term.toUpperCase() : "GANEY"}</h3><br /><br />  */}
-        <input className='form-control' value={this.state.term} onChange={event => this.onInputChange(event.target.value)} />
+      <div ><h3>GlueTube</h3>
+        <div className="search-bar">
+          {/*  <h3>{!!this.state.term ? this.state.term.toUpperCase() : "GANEY"}</h3><br /><br />  */}
+          <input className='form-control' value={this.state.term} onChange={event => this.onInputChange(event.target.value)} />
+        </div>
       </div>
     )
   }

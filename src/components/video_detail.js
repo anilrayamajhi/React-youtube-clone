@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 
 
 var puke = (obj) => {
@@ -6,6 +7,7 @@ var puke = (obj) => {
 }
 
 const VideoDetail = ({video}) =>{
+  
   if(!video){
     return <div>Loading!!</div>
   }
