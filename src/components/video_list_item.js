@@ -7,6 +7,9 @@ import React from 'react';
 let style = {
   li: {
     cursor: 'pointer'
+  },
+  heading: {
+    fontSize: '14px'
   }
 }
 
@@ -26,7 +29,7 @@ const VideoListItem = ({video, onVideoSelect}) =>{
       </div>
 
       <div className="media-body">
-        <div className="media-heading">{videoData.title}</div>
+        <div className="media-heading" style={style.heading}>{videoData.title}</div>
       </div>
     </li>
   )

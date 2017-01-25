@@ -24,6 +24,7 @@
 
 .list-group-item:hover {
   background-color: #eee;
+  border-left: 3px solid red;
 }
 
 .form-control:focus {

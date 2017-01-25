@@ -1,13 +1,21 @@
 import React from 'react';
 import _ from 'lodash';
 
+let style = {
+  heading: {
+    fontSize: '21px'
+  },
+  info:{
+    fontSize: '14px'
+  }
+}
 
 var puke = (obj) => {
   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
 }
 
 const VideoDetail = ({video}) =>{
-  
+
   if(!video){
     return <div>Loading!!</div>
   }
@@ -21,8 +29,8 @@ const VideoDetail = ({video}) =>{
         <iframe className="embed-responsive-item" src={url}></iframe>
       </div>
       <div className="details">
-        <div>{videoData.title}</div>
-        <div>{videoData.description}</div>
+        <div style={style.heading}>{videoData.title}</div>
+        <div style={style.info}>{videoData.description}</div>
       </div>
     </div>
   )
