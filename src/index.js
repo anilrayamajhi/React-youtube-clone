@@ -1,3 +1,5 @@
+
+console.log("App Start");
 var dotenv = require('dotenv').load({silent: true});
 
 import React, {Component} from 'react';
