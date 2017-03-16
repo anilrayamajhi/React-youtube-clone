@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-.search-bar input {
-  width: 75%;
-}
-
 .video-item img {
   max-width: 64px;
 }
@@ -34,3 +30,13 @@
 /*.container{
   margin-top: 37px;
 }*/
+
+
+
+.loadStyle {
+  margin-top: 77px;
+}
+
+.mdl-textfield label {
+  margin-bottom: -1px;
+}

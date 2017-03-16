@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoListItem from './video_list_item'
+import VideoListItem from './video_list_item';
 
 // var puke = (obj) => {
 //   return <pre>{JSON.stringify(obj, null, ' ')}</pre>

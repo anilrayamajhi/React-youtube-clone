@@ -1,3 +1,5 @@
+var dotenv = require('dotenv').load({silent: true});
+
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
@@ -7,10 +9,13 @@ import apiKey from '../api_key';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+// import AutoCompleteExampleSimple from './components/ganey';
 
-const API_KEY = apiKey.key;
+const API_KEY = process.env.API_KEY;
 // console.log(apiKey);
 // console.log(API_KEY);
+
+
 
 class App extends Component {
   constructor(props){
@@ -40,11 +45,13 @@ class App extends Component {
 
     return (
       <div>
-        <SearchBar onSearchTermChange={videoSearch}/>
-        <VideoDetail video={this.state.selectedVideo}/>
-        <VideoList
-        onVideoSelect = {selectedVideo => this.setState({selectedVideo})}
-        videos={this.state.videos} />
+          <SearchBar onSearchTermChange={videoSearch}/>
+          <div >
+            <VideoDetail video={this.state.selectedVideo} />
+            <VideoList
+            onVideoSelect = {selectedVideo => this.setState({selectedVideo})}
+            videos={this.state.videos} />
+          </div>
       </div>
     )
   }

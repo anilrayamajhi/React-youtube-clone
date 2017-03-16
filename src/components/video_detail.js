@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
+
 let style = {
   heading: {
     fontSize: '21px'
@@ -15,9 +16,19 @@ var puke = (obj) => {
 }
 
 const VideoDetail = ({video}) =>{
+  const ganey = () =>{
+    alert("ganey");
+  }
 
   if(!video){
-    return <div>Loading!!</div>
+    // setTimeout(() => alert("ganey"), 3000)
+    // console.log(this);
+
+    const loadHour = _.debounce(ganey, 3000)
+
+    return (<div loadt={loadHour} className="loadStyle col-sm-offset-4 col-md-4"><div className="text-center">Loading!!</div>
+        <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+    </div>)
   }
 
   const videoData = video.snippet;
