@@ -24,9 +24,9 @@ const VideoDetail = ({video}) =>{
     // setTimeout(() => alert("ganey"), 3000)
     // console.log(this);
 
-    const loadHour = _.debounce(ganey, 3000)
+    // const loadHour = _.debounce(ganey, 3000)
 
-    return (<div loadt={loadHour} className="loadStyle col-sm-offset-4 col-md-4"><div className="text-center">Loading!!</div>
+    return (<div className="loadStyle col-sm-offset-4 col-md-4"><div className="text-center">Loading!!</div>
         <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
     </div>)
   }

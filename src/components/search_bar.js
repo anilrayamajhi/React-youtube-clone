@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class SearchBar extends Component {
+export default class SearchBar extends Component {
   constructor(props){
     super(props);
     this.state={term: ''};
@@ -9,7 +9,6 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <div ><h3>GlueTube</h3>
         <div className="search-bar">
           {/*  <h3>{!!this.state.term ? this.state.term.toUpperCase() : "GANEY"}</h3><br /><br />  */}
           <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
@@ -17,7 +16,6 @@ class SearchBar extends Component {
             <label className="mdl-textfield__label">GlueTube Search...</label>
           </div>
         </div>
-      </div>
     )
   }
 
@@ -30,4 +28,4 @@ class SearchBar extends Component {
 
 }
 
-export default SearchBar;
+// export default SearchBar;

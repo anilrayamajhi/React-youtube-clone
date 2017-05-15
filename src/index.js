@@ -1,6 +1,5 @@
 
-console.log("App Start");
-var dotenv = require('dotenv').load({silent: true});
+console.log("GLUETUBE ON FIRE...");
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
@@ -13,7 +12,8 @@ import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 // import AutoCompleteExampleSimple from './components/ganey';
 
-const API_KEY = process.env.API_KEY;
+// const API_KEY = process.env.API_KEY;
+const API_KEY = apiKey.key;
 // console.log(apiKey);
 // console.log(API_KEY);
 
@@ -27,7 +27,7 @@ class App extends Component {
       videos : [],
       selectedVideo: null
     };
-    this.videoSearch('surfboard')
+    this.videoSearch('GNR')
   }
 
   videoSearch(term){
@@ -47,6 +47,7 @@ class App extends Component {
 
     return (
       <div>
+          <div className="logo-container text-center"><img src="../Logo.png" /></div>
           <SearchBar onSearchTermChange={videoSearch}/>
           <div >
             <VideoDetail video={this.state.selectedVideo} />

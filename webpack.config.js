@@ -1,19 +1,15 @@
-
-const path = require('path')
-const webpack = require('webpack')
-
 module.exports = {
   entry: [
     './src/index.js'
   ],
   output: {
-    path: path.join(__dirname),
+    path: __dirname,
     publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
-      exclude: path.join(__dirname, 'node_modules'),
+      exclude: /node_modules/,
       loader: 'babel',
       query: {
         presets: ['react', 'es2015', 'stage-1']

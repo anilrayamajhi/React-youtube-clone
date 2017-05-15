@@ -27,11 +27,11 @@
   border-color: white;
   border-bottom: solid red;
 }
-/*.container{
-  margin-top: 37px;
-}*/
 
-
+.logo-container img {
+  width: 27em;
+  margin: 37px auto;
+}
 
 .loadStyle {
   margin-top: 77px;
